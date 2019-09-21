@@ -277,8 +277,8 @@
     <!--main content start-->
     <section id="main-content">
       <section class="wrapper">
-        <div class="row">
-          <div class="col-lg-9 main-chart opacity100" id="main-chart">
+        <div class="row" style="text-align:center;">
+          <div class="col-lg-5 main-chart opacity100" id="main-chart">
             <script defer src="../script.js"></script>
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
             <style>
@@ -352,7 +352,7 @@
               const video = document.getElementById("video");
               let begin = false;
               function startVideo(){
-                mainchartBackground = document.getElementById("main-chart"); mainchartBackground.className = "opacity40 main-chart col-lg-9";
+                mainchartBackground = document.getElementById("main-chart"); mainchartBackground.className = "opacity40 main-chart col-lg-12";
                 navigator.getUserMedia(
                   {video:{}},
                   stream => video.srcObject = stream,
@@ -364,7 +364,7 @@
                 if(begin == true){
                   startVideo()
                 }else{
-                mainchartBackground = document.getElementById("main-chart"); mainchartBackground.className = "opacity100 main-chart col-lg-9";
+                mainchartBackground = document.getElementById("main-chart"); mainchartBackground.className = "opacity100 main-chart col-lg-12";
                   video.srcObject = null;
                 }
               }
@@ -376,7 +376,10 @@
           <!-- **********************************************************************************************************************************************************
               RIGHT SIDEBAR CONTENT
               *********************************************************************************************************************************************************** -->
-          <div class="col-lg-3 ds" style="height: -webkit-fill-available;">
+            <a href="Home.html" style="width: 100%;margin:10px;" class="btn btn-default">Done</a>
+              <div style="display: none;" >
+                
+          <div class="col-xs-5 ds" style="height: -webkit-fill-available; text-align: center;">
             <a href="Home.html" style="width: 100%;margin:10px;" class="btn btn-default">Done</a>
             <!--COMPLETED ACTIONS DONUTS CHART-->
             <div class="donut-main"style="">
@@ -422,6 +425,7 @@
 
             <!-- / calendar -->
           </div>
+              </div>
           <!-- /col-lg-3 -->
         </div>
         <!-- /row -->
