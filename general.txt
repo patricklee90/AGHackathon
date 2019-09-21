@@ -1,0 +1,10 @@
+npm installation
+
+npm install bootstrap
+npm i jquery
+npm i popper
+
+
+npm install @tensorflow/tfjs
+
+parcel index.html

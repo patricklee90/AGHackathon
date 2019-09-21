@@ -1,0 +1,40 @@
+body{
+	text-align:center;
+	font-size:200%;
+	margin:2em;
+	font-family: Calibri, arial, sans-serif;
+}
+
+.to-top{
+	background: rgba(255,255,255,0.6);
+	color:#ff3c46;
+	padding-top:1.8em;
+	display:inline-block;/* or block */
+	position:relative;
+	border-color:#ff3c46;
+	text-decoration:none;
+	transition:all .3s ease-out;
+	text-shadow: 1px 1px #000000;
+}
+.to-top:before{
+	content:'▲';
+	font-size:.9em;
+	position:absolute;
+	top:0;
+	left:50%;
+	margin-left:-.7em;
+	border:solid .13em white;
+	border-radius:10em;
+	width:1.4em;
+	height:1.4em;
+	line-height:1.3em;
+	border-color:inherit;
+	transition:transform .5s ease-in;
+}
+.to-top:hover{
+	color:pink;
+	border-color:pink;
+}
+.to-top:hover:before{
+	transform: rotate(360deg);
+}
