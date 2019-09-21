@@ -17,7 +17,7 @@
 	
 <body>
 	<div id="slidingpoint">
-		<a onclick="toggleVideo()" href="#" class="to-top">Click Here to Start</a>
+		<a onclick="startVideo()" href="#" class="to-top">Click Here to Start</a>
 	</div>
 	<div id="chiliVideo" disabled="">
 		<video id="video" width="720" height="560" autoplay="" muted=""></video>
@@ -29,25 +29,3 @@
 	<!--script src="index.js"></script-->
 </body>
 </html>
-<script>var video = document.getElementById("video");
-var begin = false;
-
-function startVideo() {
-  navigator.getUserMedia({
-    video: {}
-  }, function (stream) {
-    return video.srcObject = stream;
-  }, function (err) {
-    return console.error(err);
-  });
-}
-
-function toggleVideo() {
-  begin = !begin;
-
-  if (begin == true) {
-    startVideo();
-  } else {
-    video.srcObject = null;
-  }
-}</script>
